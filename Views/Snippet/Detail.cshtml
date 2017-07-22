@@ -1,0 +1,12 @@
+﻿@model dotnetSnipz.Models.Snippet
+
+@{ViewBag.Title = @Model.Title;}
+
+<h1>@ViewBag.Title</h1>
+
+<div>
+	<h6>@Model.Desc</h6>
+	<p>Copy the code from the box below and Paste into your preferred text editor or IDE.</p>
+	<pre>@Model.Code</pre>
+	<p><a href="Snippet/Search/@Model.Lang">@Model.Lang</a></p>
+</div>

@@ -1,0 +1,44 @@
+﻿﻿@model IEnumerable<dotnetSnipz.Models.Snippet>
+
+@{ ViewBag.Title = "My Code Snippets";}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+		<th>Description</th>
+<!--        <th>Code</th>-->
+		<th>Language</th>
+        <th>Edit/Delete</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="Snippet/Detail/@item.Id">
+                    @item.Title
+                </a>
+            </td>
+            <td>
+                <a href="Snippet/Detail/@item.Id">
+                    @item.Desc
+                </a>
+            </td>		
+<!--            <td>
+                <a href="Snippet/Detail/@item.Id">
+                    <pre>@item.Code</pre>
+                </a>
+            </td>-->
+		    <td>
+                <a href="Snippet/Detail/@item.Id">
+                    @item.Lang
+                </a>
+            </td>
+            <td>
+                <a href="Snippet/Edit/@item.Id">Edit</a> | <a href="Snippet/Delete/@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
